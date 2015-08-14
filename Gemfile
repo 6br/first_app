@@ -46,6 +46,6 @@ end
 gem "therubyracer"
 
 group :production do
-  gem 'mysql'
+  gem 'mysql2'
   gem 'rails_12factor', '0.0.2'
 end
