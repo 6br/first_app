@@ -44,3 +44,8 @@ group :development, :test do
 end
 
 gem "therubyracer"
+
+group :production do
+  gem 'mysql'
+  gem 'rails_12factor', '0.0.2'
+end
