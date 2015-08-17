@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,6 +44,13 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'rspec-rails'
+
+  gem 'guard'
+  gem 'guard-rspec'
+
+#  gem 'spork-rails', '4.0.0'
+#  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.5.6'
 end
 
 group :test do
