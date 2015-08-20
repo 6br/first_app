@@ -6,12 +6,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <%= render 'layouts/shim' %>
 </head>
 <body>
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <%= render 'layouts/header' %>
+<!--  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
                     <ul class="nav navbar-nav">
@@ -26,9 +25,10 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> --!>
   <div class="container">
     <%= yield %>
+      <%= render 'layouts/footer' %>
   </div>
 </body>
 </html>
