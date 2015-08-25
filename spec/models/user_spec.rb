@@ -99,5 +99,9 @@ end
       specify { expect(user_for_invalid_password).to be_falsey }
     end
   end
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
 end
 end

@@ -14,7 +14,7 @@ RSpec.describe "UserPages", type: :request do
   describe "signup with" do
     before { visit signup_path }
 
-  describe "test" do
+  describe "test" , type: :feature do
     it { expect have_content('Sign up') }
     it { expect have_title(full_title('Sign up')) }
   end
@@ -23,7 +23,8 @@ RSpec.describe "UserPages", type: :request do
 
     describe "with invalid information" do
       it "should not create a user" do
-        expect { click_button submit }.not_to change(User, :count)
+        visit signup_path
+        expect { click_button 'create my account' }.not_to change(User, :count)
       end
     end
 
