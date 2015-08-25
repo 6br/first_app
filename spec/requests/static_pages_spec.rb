@@ -1,50 +1,35 @@
 require 'rails_helper'
 
 RSpec.describe "StaticPages", type: :request do
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Sample App'" do
-#      visit '/static_pages/home'
-      visit root_path 
-      expect(page).to have_content('Sample App')
-    end
-    it "should have the base title" do
-#      visit '/static_pages/home'
-      visit root_path 
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
-    end
-
-    it "should not have a custom page title" do
-#      visit '/static_pages/home'
-      visit root_path 
-      expect(page).not_to have_title('| Home')
-    end
+    it { expect have_content('Sample App') }
+    it { expect have_title(full_title('')) }
+    it { expect have_title('| Home') }
   end
 
   describe "Help page" do
+    before { visit help_path }
 
-    it "should have the content 'Help'" do
-        visit help_path 
-      expect(page).to have_content('Help')
-    end
+    it { expect have_content('Help') }
+    it { expect have_title(full_title('Help')) }
   end
 
   describe "About page" do
-    it "should have the content 'About Us'" do
-      visit about_path
-      expect(page).to have_content('About Us')
-    end
+    before { visit about_path }
+
+    it { expect have_content('About') }
+    it { expect have_title(full_title('About Us')) }
   end
 
   describe "Contact page" do
-    it "should have the content 'Contact'" do
-      visit contact_path
-      expect(page).to have_content('Contact')
-    end
+    before { visit contact_path }
 
-    it "should have the title 'Contact'" do
-      visit contact_path
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
-    end
+    it { expect have_content('Contact') }
+    it { expect have_title(full_title('Contact')) }
   end
 end
+
