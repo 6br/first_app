@@ -85,6 +85,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     ffi (1.9.10)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
@@ -187,6 +192,9 @@ GEM
     rspec-expectations (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
     rspec-mocks (3.3.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
@@ -267,6 +275,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass
   compass-rails
+  factory_girl_rails (= 4.2.1)
   font-awesome-rails
   guard
   guard-rspec
@@ -275,6 +284,7 @@ DEPENDENCIES
   mysql2
   rails (= 4.2.3)
   rails_12factor (= 0.0.2)
+  rspec-its
   rspec-rails
   sass-rails (~> 5.0)
   sass-rails-source-maps
