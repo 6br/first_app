@@ -23,7 +23,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'compass'
 gem 'bootstrap-sass'
-gem 'compass-rails'#, github: "Compass/compass-rails", branch: "master"
+gem 'compass-rails'
+gem 'sass-rails-source-maps'
+#, github: "Compass/compass-rails", branch: "master"
 gem 'font-awesome-rails'
 
 gem 'sprockets'
