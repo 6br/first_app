@@ -67,6 +67,23 @@ group :development, :test do
   gem 'childprocess', '0.5.6'
 end
 
+group :development do
+  # エラー画面をわかりやすく整形してくれる
+  gem 'better_errors'
+
+  # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
+
+  gem 'pry-rails'
+
+  gem 'quiet_assets'
+
+  gem 'bullet'
+
+  gem 'rails-flog', :require => 'flog'
+
+end
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.2.0'
@@ -84,5 +101,6 @@ end
 group :doc do
   gem 'sdoc', '0.4.1', require: false
 end
+
 
 
