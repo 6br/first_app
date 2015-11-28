@@ -56,6 +56,8 @@ GEM
       sass (>= 3.3.0)
     bootstrap-will_paginate (0.0.10)
       will_paginate
+    bootstrap-wysihtml5-rails (0.3.3.7)
+      railties (>= 3.0)
     builder (3.2.2)
     bullet (4.14.7)
       activesupport (>= 3.0.0)
@@ -329,6 +331,7 @@ DEPENDENCIES
   bootstrap-generators
   bootstrap-sass
   bootstrap-will_paginate
+  bootstrap-wysihtml5-rails
   bullet
   byebug
   capybara (= 2.2.0)

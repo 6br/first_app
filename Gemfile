@@ -26,7 +26,8 @@ gem 'sass-rails-source-maps'
 gem 'font-awesome-rails'
 
 gem 'sprockets'
-  gem 'bootstrap-sass'
+gem 'bootstrap-sass'
+gem 'bootstrap-wysihtml5-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

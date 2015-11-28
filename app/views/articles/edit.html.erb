@@ -11,3 +11,10 @@
 </div>
 
 <%= render 'form' %>
+<textarea id="some-textarea" placeholder="Enter text ..."></textarea>
+<script>
+  $(document).ready(function() {
+	    return $("#some-textarea").wysihtml5();
+	});
+</script>
+
