@@ -26,6 +26,7 @@ gem 'sass-rails-source-maps'
 gem 'font-awesome-rails'
 
 gem 'sprockets'
+  gem 'bootstrap-sass'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -86,7 +87,6 @@ group :development do
 	gem 'rails-erd'
 	gem 'bootstrap-generators'
 	gem 'simple_form'
-  gem 'bootstrap-sass'
 end
 
 group :test do
