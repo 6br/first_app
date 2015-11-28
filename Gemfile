@@ -20,7 +20,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'compass'
-gem 'bootstrap-sass'
 gem 'compass-rails'
 gem 'sass-rails-source-maps'
 #, github: "Compass/compass-rails", branch: "master"
@@ -82,6 +81,12 @@ group :development do
 
   gem 'rails-flog', :require => 'flog'
 
+	gem 'rack-mini-profiler' # 簡易プロファイラ
+
+	gem 'rails-erd'
+	gem 'bootstrap-generators'
+	gem 'simple_form'
+  gem 'bootstrap-sass'
 end
 
 group :test do
