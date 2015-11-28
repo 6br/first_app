@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 	has_many :microposts, dependent: :destroy
-    has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :articles, foreign_key: "writer",class_name:  "Article"
+  has_many :articles, foreign_key: "editer",class_name:  "Article"
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :reverse_relationships, foreign_key: "followed_id",
                                    class_name:  "Relationship",
                                    dependent:   :destroy
