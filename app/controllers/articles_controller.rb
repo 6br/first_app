@@ -12,6 +12,20 @@ class ArticlesController < ApplicationController
   def show
   end
 
+	def assign_as_editor_article
+	  article = Article.find(params[:format])
+		article.editor_id = current_user.try(:id)
+		article.save!
+		redirect_to articles_path
+	end
+
+	def assign_as_writer_article
+	  article = Article.find(params[:format])
+		article.writer_id = current_user.try(:id)
+		article.save!
+		redirect_to articles_path
+  end
+
   # GET /articles/new
   def new
     @article = Article.new

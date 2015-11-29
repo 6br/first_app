@@ -31,8 +31,14 @@
             <td><%= article.status %></td>
             <td><%= article.desc %></td>
             <td><%= article.deadline %></td>
-            <td><%= article.writer.try(:name) %></td>
-            <td><%= article.editor.try(:name) %></td>
+						<td><% if article.writer%>
+										 <%= article.writer.name %>
+										 <% else%>
+											 <%= link_to "Assign", assign_as_writer_article_path(article) %><%end%></td>
+						<td><% if article.editor%>
+										 <%= article.editor.name %>
+										 <% else%>
+											 <%= link_to "Assign", assign_as_editor_article_path(article) %><%end%></td>
             <td>1000</td>
             <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
